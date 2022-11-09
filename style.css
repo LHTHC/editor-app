@@ -27,6 +27,7 @@ a:hover {
 body {
   margin: 0;
   display: flex;
+  flex-direction: column;
   place-items: center;
   min-width: 320px;
   min-height: 100vh;
@@ -37,33 +38,14 @@ h1 {
   line-height: 1.1;
 }
 
-#app {
+#app,
+#readonly {
   background-color: #eef5fa;
   border-radius: 80px;
 
   max-width: 1280px;
-  margin: 0 auto;
+  margin: 20px auto;
   padding: 70px 60px;
-}
-
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.vanilla:hover {
-  filter: drop-shadow(0 0 2em #f7df1eaa);
-}
-
-.card {
-  padding: 2em;
-}
-
-.read-the-docs {
-  color: #888;
 }
 
 button {
@@ -73,10 +55,10 @@ button {
   font-size: 1em;
   font-weight: 500;
   font-family: inherit;
-  background-color: #1a1a1a;
   cursor: pointer;
   transition: border-color 0.25s;
 }
+
 button:hover {
   border-color: #646cff;
 }
@@ -98,7 +80,9 @@ button:focus-visible {
   }
 }
 
-#editorjs {
+#editorjs,
+#readonly,
+.data-container {
   width: 800px;
   background-color: whitesmoke;
   padding: 40px;
@@ -111,4 +95,12 @@ button:focus-visible {
 .codeflask.codeflask--has-line-numbers:before,
 .codeflask__lines {
   z-index: 0 !important;
+}
+
+.controls {
+  margin-top: 20px;
+}
+
+.btn {
+  background-color: #535bf2;
 }
