@@ -58,4 +58,16 @@ const editor = new EditorJS({
   placeholder: "Let`s write an awesome story!",
 });
 
-export default editor;
+const saveButton = document.querySelector(".btn-save");
+
+saveButton.addEventListener("click", () => {
+  editor
+    .save()
+    .then((data) => {
+      console.log("generated data: ", data);
+      navigator.clipboard.writeText(JSON.stringify(data));
+    })
+    .catch((error) => {
+      console.log("failed", error);
+    });
+});
