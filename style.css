@@ -107,3 +107,8 @@ button:focus-visible {
   box-shadow: 0 24px 24px -18px rgba(64, 95, 117, 0.33),
     0 9px 45px 0 rgba(112, 116, 148, 0.12);
 }
+
+.codeflask.codeflask--has-line-numbers:before,
+.codeflask__lines {
+  z-index: 0 !important;
+}
